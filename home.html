@@ -1,0 +1,145 @@
+{% extends 'AccountsApp_base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+{% include "sidePanel.html" %}
+
+<body>
+    <div class="vertical-center homeText">
+        <div class="container text-center mx-auto">
+            <p id="homeTop" class="mb-0 pb-0">welcome to</p>
+            <h2 id="homeHeader" class="mt-0 pt-0">Travel Scrape
+                <p style="cursor:pointer" id="pointR" onclick="changeBg('right')"
+                style="cursor:pointer" id="pointL" onclick="changeBg('left')">
+                &#10094; &#x276F;
+                </p>
+            </h2>
+           
+        </div>
+    </div>
+
+    <!--START BOTOM WIDGITS-->
+
+    <!--START TO DO LIST WIDGET-->
+    <div id="widgetPopup" class="flex-home-container">
+        <div class="widget-box">  
+            <button class="open-button1 open-button-left" type="button" onclick="openForm1()">To Do List</button>
+            
+            <div class="form-popup1" id="myWidget1">
+                <form class="form-container">
+                    <!--<h1 class="widget-heading">To Dos</h1>--><!--leaving this here in case other devs want it-->
+                    <div class="form-block">
+                        <label for="city"><b>Item 1</b></label>
+                        <input type="text" placeholder="item 1" name="item1" required>
+                    
+                        <label for="state"><b>Item 2</b></label>
+                        <input type="text" placeholder="item 2" name="item2" required>
+
+                        <label for="country"><b>Item 3</b></label>
+                        <input type="text" placeholder="item 3" name="item3" required>
+                    </div>
+                    <div class="form-footer">
+                        <button type="submit" class="btn submit" onclick="submitForm1()">Submit</button>
+                        <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div> 
+        <!--END TO DO LIST WIDGET-->
+
+        <!--START WEATHER WIDGET-->
+        <div class="widget-box">   
+            <button class="open-button2 open-button-left" onclick="openForm2()">Weather</button>
+                
+                <div class="form-popup2" id="myWidget2">
+                    <form class="form-container">
+                        <!--<h1 class="widget-heading">Weather</h1>--><!--leaving this here in case other devs want it-->
+                        <div class="form-block">
+                            <label for="city"><b>City</b></label>
+                            <input type="text" placeholder="Enter city" name="city" required>
+                        
+                            <label for="state"><b>State</b></label>
+                            <input type="text" placeholder="Enter State" name="state" required>
+
+                            <label for="state"><b>Country</b></label>
+                            <input type="text" placeholder="Enter State" name="state" required>
+                        </div>
+                        <div class="form-footer">
+                            <button type="submit" class="btn submit" onclick="submitForm2()">Submit</button>
+                            <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+        <!--END WEATHER WIDGET-->
+
+        <!--START CURRENCY WIDGET-->
+        <div class="widget-box">    
+            <button class="open-button3 open-button-right" onclick="openForm3()">Currency</button>
+                
+                <div class="form-popup3" id="myWidget3">
+                    <form class="form-container">
+                        <!--<h1 class="widget-heading">Currency</h1>--><!--leaving this here in case other devs want it-->
+                        <div class="form-block">
+                            <label for="city"><b>Currency</b></label>
+                            <input type="text" placeholder="Currency" name="currency" required>
+                        
+                            <label for="state"><b>Amount</b></label>
+                            <input type="text" placeholder="Amount" name="amount" required>
+
+                            <label for="state"><b>Conversion</b></label>
+                            <input type="text" placeholder="Comversion" name="conversion" required>
+                        </div>
+                        <div class="form-footer">
+                            <button type="submit" class="btn submit" onclick="submitForm3()">Submit</button>
+                            <button type="button" class="btn cancel" onclick="closeForm3()">Close</button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+        <!--END CURRENCY WIDGET-->
+
+        <!--START TRAVEL WIDGET-->
+        <div class="widget-box">    
+            <button class="open-button4 open-button-right" onclick="openForm4()">Travel</button>
+                
+                <div class="form-popup4" id="myWidget4">
+                    <form class="form-container">
+                        <!--<h1 class="widget-heading">Destination</h1>--><!--leaving this here in case other devs want it-->
+                        <div class="form-block">
+                            <label for="city"><b>City</b></label>
+                            <input type="text" placeholder="Enter City" name="city" required>
+                        
+                            <label for="state"><b>State</b></label>
+                            <input type="text" placeholder="Enter State" name="state" required>
+
+                            <label for="state"><b>Country</b></label>
+                            <input type="text" placeholder="Enter Country" name="country" required>
+                        </div>
+                        <div class="form-footer">
+                            <button type="submit" class="btn submit" onclick="submitForm4()">Submit</button>
+                            <button type="button" class="btn cancel" onclick="closeForm4()">Close</button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+        <!--END TRAVEL WIDGET-->
+
+        <!--END BOTTOM WIDGETS-->
+</body>
+
+</html>
+
+{% else %}
+    <!--Logged Out Screen-->
+    <br><br><br><br><br><br>
+    <div class="appContainer login-div text-center">
+        <h1 class="header">Hey Stranger...</h1>
+        <a class="btn btn-info" href="{% url 'login' %}">Login</a>              
+    </div>
+{% endif %}
+
+{% endblock %}

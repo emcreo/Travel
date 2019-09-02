@@ -1,0 +1,1514 @@
+/*************************************************/
+/*              Global Styles                      */
+/*************************************************/
+
+
+
+body {
+     /* Background  */
+     height: 100%;  
+     background-repeat: no-repeat;
+     background-size: cover;
+     font-family: Verdana, Geneva, sans-serif;
+     background-color: #87B5B3;
+     /* photo fills screen */
+     background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+h1{
+    font-size: 45px;
+    text-align: center;
+}
+
+h2{ 
+    font-size: 35px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+/* use this for all form containers */
+.appContainer{
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1px 16px 0 rgba(0,0,0,0.5);
+    border-radius: 1px;
+    margin: 1% 3% 3% 3%;
+    word-wrap: normal;
+    position: relative;
+    flex-basis: auto;
+    height: auto;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+/* use this for all header styling */
+.header {
+    text-align: center;
+    color: black;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 16px 0 rgba(0,0,0,0.5);
+    padding: 1% 1% 1% 1%;
+    margin: -20px -20px 20px -20px;
+}
+
+
+
+
+
+
+/******************************************/
+/*     CSS PAGE STYLES FOR DASHBOARD      */
+/******************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another. */
+
+/* Only shows if the user is not logged in */
+.login-div {
+    width: 60%;
+    min-width: 100px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.categories {
+    position: absolute;
+    /*helps to fix the position for the row box*/
+    left: 45%;
+    /*This moves the row box left or right on the page based on the percentage you use */
+    top: 100;
+    /* distance from the top */
+    width: 53%;
+    /*was at 80% */
+    text-align: center;
+    margin: auto;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, .25);
+    padding-top: 30px;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: transparent;
+
+    /*testing for raised effect -- seems to give it a nice look*/
+    /* line-height: 4em; */
+    margin: 2em 4em;
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+#welcome-link {
+    color: white;
+    cursor: default;
+}
+
+/*This will effect the view behind the raised applications if you need to change color or place images*/
+.container-fluid {
+    /* background-color: rgb(216, 208, 208); */
+    /* background-color: #E0E0E0; */
+    background-color: transparent;
+}
+
+/* Styling for pop-over effects */
+.popover {
+    background-color: #9e9e9e;
+    font-weight: bold;
+    color: blue;
+    font-size: 15px;
+    font-family: montserrat;
+    line-height: 1.5em;
+    margin: 1em 2em;
+    border: 3px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/**************************************/
+/*     CSS PAGE STYLES FOR LOGON      */
+/**************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+
+.login-form {
+    margin-top: 20px;
+}
+
+a.registration-link {
+    color: white;
+    text-decoration: none;
+}
+
+a.registration-link:hover {
+    text-decoration: underline;
+}
+
+
+/*****************************************/
+/*     CSS STYLES FOR SIDE NAV BAR     */
+/*****************************************/
+
+nav {
+    z-index: 1;
+    line-height: 1.5;
+    /* overrides line height to keep nav bar uniform*/
+}
+
+
+/* To remove an unwanted hover effect */
+nav ul a:hover {
+    background-color: transparent;
+}
+
+.menu-inner {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #281616;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.menu-inner p {
+    z-index: 2;
+    padding: 0px 32px 0px 32px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #f1f1f1;
+    display: block;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.menu-inner a {
+    z-index: 2;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu-inner a:hover {
+    z-index: 2;
+    color: #FCECDD;
+    background-color: #86411A;
+}
+
+.menu-inner .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+    display: inline;
+    background-color: transparent !important;
+    /*overrides background color change on hover*/
+}
+
+.menu-inner .settingsbtn {
+    top: 12px;
+    position: absolute;
+    z-index: 2;
+    font-size: 25px;
+    left: 34px;
+    top: 28px;
+    font-size: 20px;
+    display: inline;
+    color: #FCECDD;
+    background-color: transparent !important;
+    /*overrides background color change on hover*/
+}
+
+@media screen and (max-height: 450px) {
+    .menu-inner {
+        padding-top: 15px;
+    }
+
+    .menu-inner a {
+        font-size: 18px;
+    }
+}
+
+.vertical-center {
+    min-height: 90%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+/*****************************>>>>>>>>>>>>>>>>>>*/
+.arrows p {
+    font-size: 50px;
+    text-shadow:
+        -1.5px -1.5px 0 white,
+        1.5px -1.5px 0 white,
+        -1.5px 1.5px 0 white,
+        1.5px 1.5px 0 white;
+    /*display: inline-block;*/
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    transition: 0.2s;
+}
+/*****************************>>>>>>>>>>>>>>>>>>*/
+.arrows p:hover {
+    font-size: 45px;
+}
+
+#homeTop {
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+    font-size: 30px;
+}
+
+#homeHeader {
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+    font-size: 60px;
+    /* font-family: Verdana, Geneva, sans-serif */
+    ;
+}
+
+.menuButton {
+    text-shadow:
+        -1px -1px 0 lightgray,
+        1px -1px 0 lightgrey,
+        -1px 1px 0 lightgray,
+        1px 1px 0 lightgrey;
+    padding-top: 2.5%;
+    padding-left: 1%;
+}
+
+.homeText {
+    padding-bottom: 320px;
+}
+
+/*******************************************/
+/*    START CSS STYLE FOR POP-UP WIDGETS   */
+/*******************************************/
+
+/* body {font-family: Arial, Helvetica, sans-serif;} === used in scratch file*/
+/* {box-sizing: border-box;} ===  used in scratch file */
+
+div.widget-box {
+    height: 200px;
+}
+
+div.form-popup1, div.form-popup2, div.form-popup3, div.form-popup4 {
+    border-style: groove;
+}
+
+
+div.widget-box .widget-heading { /* needed because element was being funky */
+    font-size: 50px;
+    display: block;
+    font-size: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+#myWidget1, #myWidget2, #myWidget3, #myWidget4 {
+    height: 260px;
+    margin: 0 auto;
+}
+
+.open-button1, .open-button2, .open-button3, .open-button4 {
+    background-color: #281616;
+    color: white;
+    border: 20px, 1A646F;
+    cursor: pointer;
+    opacity: 1;
+    position: fixed; /* needed to keep buttons at botom of page */
+    bottom: 0;
+    width: 200px;
+}
+
+.open-button-left {
+    margin-left: 15px;
+}
+
+.open-button-right {
+    margin-right: 15px;
+}
+
+/*button position on fixed bottom*/
+.open-button1 {
+    left: 0%;  
+}
+
+.open-button2 {
+    left: 25%;
+}
+
+  .open-button3 {
+    right: 25%;
+}
+
+  .open-button4 {
+    right: 0;
+}
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+button.open-button1, button.open-button2, button.open-button3, button.open-button4 {
+    height: 50px;
+    width: 170px;
+    font-size: 20px;
+    padding-left: 10px;
+
+}
+
+/* The popup form - hidden by default */
+.form-popup1, .form-popup2, .form-popup3, .form-popup4 {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 200px;
+    border: 3px solid #f1f1f1;
+}
+.form-popup1 {
+  left: 0%;
+}
+
+.form-popup2 {
+    left: 25%;
+}
+
+.form-popup3 {
+    right: 25%;
+}
+
+.form-popup4 {
+    right: 0;
+}
+
+
+.form-container {
+  font-size: 12px;
+  max-width: 300px;
+  padding: 10px;
+  padding-bottom: 0px;
+  background-color: white;
+}
+
+.form-container .form-block {
+    margin-bottom: 20px;
+}
+
+form.form-container {
+    
+    padding-left: 20px;
+}
+
+
+.form-container input[type=text] {
+  padding: 10px;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+.form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .form-footer {
+    display: flex; 
+    justify-content: space-between;
+}
+
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  flex-basis: 50%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+  margin-right: 20px;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/*******************************************/
+/*    END CSS STYLE FOR POP-UP WIDGETS     */
+/*******************************************/
+
+
+/*******************************************/
+/*     CSS PAGE STYLES FOR TO-DO LIST      */
+/*******************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! 
+
+- This content is saved in another css file (ToDoList_main.css for easier access
+
+*/
+
+
+ 
+
+/***************************************/
+/*     CSS PAGE STYLES FOR BudgetApp      */
+/***************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+/* So Far as a result of combining styles onto one page it is causing some overriding to occur for various css/html/js related to each app*/
+/* As a workaround I have created some specific renaming of classes in order to keep the proper styling in effect */
+/* I'll try to include notes if I feel they stick out to help anyone who comes after and wants to make some fine tuning */
+/* EB -- 6/23/19 */
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/*===== General BudgetApp Styles =====*/
+
+
+
+.budget-subheader {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.round-border {
+    border-radius: 6px;
+}
+
+/*===== Budget List Page Styling =====*/
+
+.budget-list {
+    width: 50%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.project-name-link {
+    color: black;
+    text-decoration: none;
+}
+
+.project-name-link:hover {
+    color: #17a2b8;
+}
+
+/* Text color changes for budget amounts below, at, and above $0 */
+.red-text {
+    color: red;
+}
+
+.orange-text {
+    color: orange;
+}
+
+.green-text {
+    color: green;
+}
+
+/*===== Add Budget Page Styling =====*/
+.projectAddContainer {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+form ul li.category {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.projectAdd_ul {
+    padding-left: 0px;
+}
+
+.projectAddForm label {
+    font-weight: bold;
+}
+
+.projectAddForm input {
+    width: 35%;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/*===== Budget Detail Page Styling =====*/
+.expense-list-container {
+    background: white;
+    width: 75%;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.expense-list-container h3 {
+    padding: 0px;
+    margin: 10px 0px;
+}
+
+.expenses-table {
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+    border: 1px solid #dee2e6;
+}
+
+.add-expense-form input,
+select {
+    width: 25%;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.budget-row-container {
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.balance-budget-card {
+    margin: 0px 10px;
+}
+
+.budget-card-header {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.budget-card-amount {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.icon-button {
+    background-color: inherit;
+    border: none;
+}
+
+.icon-button:hover {
+    color: #17a2b8;
+}
+
+/*************************************************/
+/*     CSS PAGE STYLES FOR TRAVEL ADVISORIES     */
+/*************************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+.advisory_container{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    padding: 1%;
+    flex-wrap: wrap;
+    margin: auto;
+    flex-direction: row;
+
+}
+
+
+.advisoryLvls{
+    display: flex;
+    margin: auto;
+    width: 370px;
+    height: 300px;
+    position: absolute;
+    left: 5%;
+    border-color: black;
+    text-align: center;
+    /* For a 3D raised effect */
+    line-height: 1em;
+    /* margin: 1em 2em; */
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    
+}
+
+.advisory_form{
+     display: inline-block;
+     margin: auto;     
+     width: 370px;
+     height: 300px;
+     position: absolute; 
+     left: 69%; /*This moves the row box left or right on the page based on the percentage you use */
+     background-color: lightgray;
+     font-family: 'Montserrat';
+     font-size: 20px;
+     font-weight: bold;
+     /* For a 3D raised effect */
+     line-height: 1em;
+     /* margin: 1em 2em; */
+     border: 6px outset #9a9;
+     box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+     -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+     -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+}
+
+.advisory_Btn{
+    margin-left: 20px;
+    margin-right: 10px;
+    color: black;
+    background-color: #17a2b8;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0px 40px;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, .25);
+}
+
+.advisory_cautionLvl{
+    display: inline-block;
+    margin: auto;     
+    width: 370px;
+    height: 300px;
+    position: absolute;
+    left: 37%; /*This moves the row box left or right on the page based on the percentage you use */ 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    /* For a 3D raised effect */
+    line-height: 5em;
+    /* margin: 1em 2em; */
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/*  Changing the style name for " advisory_div5 " seems to remove the background color */
+.moreInfo{
+    display: inline-block;
+    margin: 0 auto;
+    background: azure;
+    width: 370px;
+    height: 300px;
+    position: absolute;
+    left: 69%; /*This moves the row box left or right on the page based on the percentage you use */ 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    /* For a 3D raised effect */
+    line-height: 1em;
+    /* margin: 1em 2em; */
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.advisory_h2 {
+    font-family: 'Montserrat';
+    text-align: left;
+    font-style: italic;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.advisory_h3 {
+    font-family: 'Montserrat';
+    color: black;
+    text-align: center;
+}
+
+/***************************************/
+/*  CSS PAGE STYLES FOR RESTAURANTApp  */
+/***************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+
+.restaurant_container {
+    background-color: rgb(250, 250, 250);
+    border-radius: .25rem;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, .25);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+}
+
+.restaurant_breadcrum {
+    display: block;
+    width: 100%;
+}
+
+.restaurant_splash_text {
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+.restaurant_badge_container {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.restaurant_badge {
+    width: 20%; 
+    margin: 2px; 
+    padding: 4px 4px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    background: linear-gradient(to right, rgb(230, 230, 230) 0%,rgba(0,0,0,0) 100%);
+}
+
+.restaurant_badge a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.restaurant_badge a:visited {
+    color: black;
+}
+
+.restaurant_badge:hover {
+    background: linear-gradient(to right, rgba(23, 79, 184, 0.2) 0%,rgba(0,0,0,0) 100%);
+}
+
+.restaurant_rating_badge {
+    background-color: rgb(50, 175, 71);
+    color: #fff;
+    display: inline-block;
+    padding: 0px 8px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.restaurant_rating_badge > span {
+    font-size: 1.5em;
+}
+
+.restaurant_card_image {
+    max-width: 200px;
+    max-height: 180px;
+}
+
+.restaurant_card_info {
+    font-size: 0.9em;
+}
+
+.restaurant_featured_card {
+    width: 25%;
+    max-width: 200px;
+}
+
+
+/* 
+
+*********************** Delete in the future *************************
+This is just commented out incase another app needs the old styles
+
+#RestWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#RestTitle {
+    font-family: "Give You Glory", cursive;
+    font-size: 3.7em;
+    font-weight: 700;
+    position: relative;
+    bottom: 25px;
+    color: #000;
+    text-align: center;
+}
+
+#RestTitle2 {
+    position: relative;
+    bottom: 25px;
+    color: #000;
+    text-align: center;
+}
+
+#RestInputFormContainer,
+#RestSearchResult {
+    display: block;
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    For a 3D raised effect 
+    line-height: 1em;
+    margin: 1em 2em;
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+#ZomatoWidget {
+    position: -webkit-sticky;
+    top: 0;
+    width: 260px;
+    height: 715px;
+    display: inline-block;
+}
+
+widget_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.RestSteps-item {
+    display: inline-block;
+    margin: 0 33px 0;
+    position: relative;
+}
+
+.banner-form {
+    margin-bottom: 60px;
+    display: block;
+    margin-top: 20px;
+}
+
+.RestSteps-item h4 {
+    font-family: "Give You Glory", cursive;
+    font-weight: bold;
+    color: #000;
+    font-size: 21px;
+}
+
+.RestSteps-item h4 span {
+    color: #f30;
+} */
+
+
+/*****************************************/
+/*     CSS PAGE STYLES FOR CURRENCY      */
+/*****************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+
+.CurrencyApp_form {
+    height: 200px;
+    width: 400px;
+    margin-left: 39%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    background-color: lightgray;
+    /* For a 3D raised effect */
+    /* line-height: 1em; */
+    /* margin: 1em 2em; */
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.CurrencyApp_converter_div1 {
+    height: 150px;
+    width: 400px;
+    margin-left: 40%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    background-color: lightgray;
+    /* For a 3D raised effect */
+    /* line-height: 1em; */
+    /* margin: 1em 2em; */
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/****************************************/
+/*     CSS PAGE STYLES FOR FLIGHTS      */
+/****************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+
+/***************************************/
+/*     CSS PAGE STYLES FOR HOTELS      */
+/***************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+
+#HotelDestination {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #000;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+form .row {
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.HotelSelection {
+    text-align: center;
+    list-style-position: inside;
+    font-size: 18px;
+    font: bold;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+#HotelResults {
+    overflow: auto;
+    padding: 30px 50px;
+    margin: 30px;
+    background-color: azure;
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.modal-backdrop {
+    opacity: 0.5 !important;
+    position: absolute !important;
+}
+
+.modal-header,
+.modal-footer {
+    background-color: #17a2b8;
+}
+
+.modal-body {
+    background-color: azure;
+}
+
+
+/**************************************/
+/*     CSS PAGE STYLES FOR SLACK      */
+/**************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+
+/*****************************************/
+/*     CSS PAGE STYLES FOR TRAVELOGUE      */
+/*****************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+
+.travelogue-Form {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+a.blog-header {
+    color: inherit;
+    font-size: 2em;
+}
+
+a.blog-tag {
+    color: inherit;
+}
+
+a.blog-header:hover,
+a.blog-tag:hover {
+    color: #17a2b8;
+}
+
+.comments-spacing {
+    padding: 10px;
+}
+
+.blog-comments {
+    margin-bottom: 0px;
+}
+
+.no-border {
+    border: none;
+}
+
+.comment-header {
+    font-size: 1.5em;
+}
+
+.blog-form p {
+    margin: 5px;
+    font-weight: normal;
+}
+
+.blog-form label {
+    font-weight: normal;
+    padding: 0px;
+    margin: 5px;
+    display: block;
+}
+
+.blog-form textarea {
+    resize: none;
+    width: 90%;
+    border-radius: 6px;
+}
+
+.blog-form input {
+    width: 50%;
+    border-radius: 6px;
+}
+
+.category-container {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.category-header {
+    text-align: center;
+    font-size: 2em;
+    display: inline;
+}
+
+
+/*****************************************/
+/*     CSS PAGE STYLES FOR AirportApp    */
+/*****************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+/* 
+.airportForm{
+    text-align: center; 
+    width: 40%; 
+    margin: 0 auto; 
+    padding: 10px; 
+    background-color: lightgray;
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(155, 113, 113, 0.4);
+}
+
+.airportResults {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: lightgray;
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+} */
+
+
+/*****************************************/
+/*     CSS PAGE STYLES FOR MAP APP       */
+/*****************************************/
+.MapApp_form {
+    height: 250px;
+    width: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+#map_btn {
+    margin-top: 20px;
+}
+
+#map_header {
+    text-shadow: 1px 1px 2px white;
+}
+
+#directions {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* #directions_steps {
+    background-color: #f2f2f2;
+} */
+
+#direction_header {
+    text-shadow: 1px 1px 2px white;
+}
+
+a.m {
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+/*****************************************/
+/*     CSS PAGE STYLES FOR MEETUP APP      */
+/*****************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+
+.meetup_mainform {
+    width: 2000px;
+}
+
+.meetup_eventInfo {
+    max-height: 400px;
+    overflow: auto;
+    text-align: center;
+}
+
+#meetup_eventDateTime {
+    font-size: 24px;
+}
+
+#meetup_eventName {
+    font-size: 25px;
+}
+
+/*****************************************/
+/*  CSS PAGE STYLES FOR WeatherApp  */
+/***************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+
+.weather_page_container {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1px 16px 0 rgba(0,0,0,0.5);
+    border-radius: 1px;
+    margin: 1% 3% 3% 3%;
+    word-wrap: normal;
+}
+
+/***************************************/
+/*  CSS PAGE STYLES FOR CalendarApp  */
+/***************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
+
+.calendar {
+    width: 98%;
+    margin: auto;
+    font-size: 13px;
+  }
+  
+.calendar tr, .calendar td {
+    border: 1px solid black;
+    background-color: #f1f1f1;
+}
+  
+.calendar th {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #17a2b8;
+ }
+  
+.calendar td {
+    width: 200px;
+    height: 150px;
+    padding: 20px 0px 0px 5px;
+}
+  
+.month {
+    font-size: 25px;
+}
+  
+.date {
+    font-size: 18px;
+}
+  
+ul {
+    height: 100%;
+    padding: 0px 5px 0px 20px;
+}
+  
+ a {
+    color: #17a2b8;
+ }
+
+.calleft {
+    float: left;
+}
+  
+.calright {
+    float: right;
+}
+  
+.btn {
+    outline: none;
+    color: black;
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
+ }
+  
+.clearfix {
+    margin: 15px;
+}
+
+.caldel {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 39%;
+}
+
+.weather_title {
+    text-align: center;
+    color: black;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 16px 0 rgba(0,0,0,0.5);
+    padding-bottom: 1%; 
+    margin-bottom: 1%;
+}
+
+.weather_flex-card {
+    display: flex;
+    width: 100%;
+    padding: 1%;
+    flex-wrap: wrap;
+    margin: auto;
+    overflow: hidden;
+} 
+
+.weather_flex-card_start {
+    display: flex;
+    width: 100%;
+    padding: 1%;
+    flex-wrap: wrap;
+    margin: auto;
+    flex-direction: column;
+} 
+
+
+.weather_search_start {
+    display: block;
+    margin: auto;
+}
+
+.weather_img_start {
+    display: block;
+    margin: auto;
+}
+
+.weather_search {
+    word-wrap: normal;
+    justify-content: flex-start;
+    margin-right: 2%;
+}
+
+.weather_current {
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.weather_flex-card_5day {
+    display: flex;
+    width: 100%;
+    padding: 1%;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 500px) {
+    .weather_flex-card_5day, .weather_search, 
+    .weather_current, .weather_search_start, 
+    .weather_img_start, .weather_flex-card { 
+      display: block;
+      width: 100%;
+    }
+}
+
+.weather_5day, .weather_current {
+    margin: .2%;
+    word-wrap: normal;
+    background: rgba(235, 241, 241, .9);
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.5);
+    border-radius: 1px;
+    padding: 1%;
+    flex: 1;
+}
+
+.weather_input {
+    width: 100%;
+    padding: 5px;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.5);
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    background: rgb(235, 241, 241);
+    font-size: 20px;
+}
+
+.weather_btn {
+    width: 100%;
+    padding: 5%;
+    margin-top: 2%;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.5);
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    background: rgb(235, 241, 241);
+    font-size: 20px;
+}
+
+.weather_img, .weather_h4 {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*****************************************/
+/*     CSS PAGE STYLES FOR COUNTRIES APP      */
+/*****************************************/
+ 
+
+  h1 {
+    text-align: center;
+  }
+  #countries-container {
+    width: 502px;
+    margin: 30px auto;
+    padding: 0;
+    background-color: lightgray;
+  
+    text-align: center;
+    /* For a 3D raised effect */
+    line-height: 1em;
+    /* margin: 1em 2em; */
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+   
+  }
+  #flag-container {
+    height: 252px;
+    background-color: #fff;
+    border: 1px solid #333;
+  }
+  #flag-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #countries-info-container select {
+    display: block;
+    margin: 20px auto;
+    padding: 5px;
+    min-width: 100%;
+    color: #333;
+    font-size: 15px;
+    font-weight: 900;
+    text-align-last: center;
+    border: 1px solid #333;
+  }
+  #info-container p {
+    padding: 0 10px;
+    font-weight: 600;
+  }
+  #info-container p span {
+    font-weight: normal;
+  }
+  
+  @media (max-width: 768px) {
+    body { font-size: 12px;}
+         
+    #main-container { width: 342px; }  
+    #flag-container { height: 172px; }  
+    #info-container select { font-size: 12px; font-weight: 600; }
+  }
+
+/*****************************************/
+/*     CSS STYLING FOR WISH LIST APP     */
+/*****************************************/
+.WishList_form {
+    height: 300px;
+    width: 500px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin: auto;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    border: 6px outset #9a9;
+    box-shadow: 5px 5px 15px #9a9;
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.WishList_form label {
+    font-weight: bold;
+    padding: 0px;
+    margin: 5px;
+    display: inline-block;
+}
+.WishList_form input {
+    width: 65%;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+.wishlist_Btn {
+    margin-left: 20px;
+    margin-right: 10px;
+    color: black;
+    background-color: transparent;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0px 40px;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, .25);
+}
+
+.WishList_form tr{
+    padding: 10px;
+    margin: 10px;
+}
+/*****************************************/
+/*     CSS PAGE STYLES FOR NEW APPS      */
+/*****************************************/
+/* Note: Please use a unique naming convention when targetting element for each and every APP.
+This is to eliminate styles stepping over one another.
+Good example: check Travel Advisory! */
