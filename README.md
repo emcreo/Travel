@@ -1,7 +1,11 @@
 # Intern-Project_python
 This project is a web scraping application built with Django and Beautfiulsoup.  The application will gather data from the web that is relevant to the user, who is looking to travel.  It will include weather, flights info, events, restaurants, etc. We will be getting the data with webscraping and APIs.
 
-# My contribution: created new app within TravelScrape application, and created interactive buttons on home page
+My contribution: 
+
+created new app within TravelScrape application
+
+created interactive buttons on home page
 
 
 Project Summary
